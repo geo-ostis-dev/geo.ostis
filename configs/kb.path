@@ -1,0 +1,9 @@
+# common
+ims.ostis.kb/out
+
+# private
+kb
+
+# components
+sc-web/components/scg/kb
+
