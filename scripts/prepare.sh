@@ -18,7 +18,7 @@ substage "Install dependencies"
 #---------------------------------------
 cd sc-machine/scripts
 ./install_deps_ubuntu.sh
-./sudo apt-get install redis-server
+sudo apt-get install redis-server
 #---------------------------------------
 
 #=======================================
@@ -44,15 +44,14 @@ sudo apt install python-dev
 #=======================================
 substage "Install dependecies"
 #---------------------------------------
-cd $project_folder/sc-web/scripts
-./install_deps_ubuntu.sh
-./install_nodejs_dependence.sh
+./sc-web/scripts/install_deps_ubuntu.sh
+./sc-web/scripts/install_nodejs_dependence.sh
 #---------------------------------------
 
 #=======================================
 substage "NPM install"
 #---------------------------------------
-cd $project_folder/sc-web
+cd sc-web
 npm install
 #---------------------------------------
 
@@ -72,12 +71,12 @@ clone https://github.com/ShunkevichDV/ims.ostis.kb
 
 #=======================================
 substage "Copy ims.ostis.kb -> ims.ostis.kb/kb"
-copy_ims_kb.sh
+./scripts/copy_ims_kb.sh
 #---------------------------------------
 
 #=======================================
 substage "Build Knowledge base"
-scripts/build_kb.sh
+./scripts/build_kb.sh
 #---------------------------------------
 
 #=======================================
@@ -89,7 +88,7 @@ npm install sc-web.module.geo
 
 #=======================================
 substage "Place"
-ostis-geo place
+geo place
 #---------------------------------------
 
 cd $current_folder

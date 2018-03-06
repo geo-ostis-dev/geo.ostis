@@ -44,11 +44,14 @@ function clone {
   
   if [[ ! -d $repo_name ]]; then
     git clone $1
-    cd $base_name
-  
+    cd $repo_name
+   
     if [[ -n $2 ]]; then
       git checkout $2
+      echo $(text green "Checkout to branch $2")
     fi
+
+    cd -
   else
     echo "You can update $(text green $base_name) manualy"
   fi
