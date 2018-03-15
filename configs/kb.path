@@ -6,4 +6,5 @@ kb
 
 # components
 sc-web/components/scg/kb
+sc-web/client/static/components/sc-web.module.geo/kb
 
